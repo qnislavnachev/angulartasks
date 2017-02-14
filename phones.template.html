@@ -1,0 +1,14 @@
+<div>
+Serch:
+<input ng-model="$ctrl.find">
+Sort by:
+<select ng-model="$ctrl.sort">
+	<option value="name">Alphabetical</option>
+	<option value="age">Newest</option>
+</select>
+	<ul>
+		<li ng-repeat="phone in $ctrl.phoneList | filter:$ctrl.find | orderBy:$ctrl.sort">
+			<a href="#{{phone.name}}"><img ng-src="{{phone.imgUrl}}"/></a>
+		</li>
+	</ul>
+</div>
